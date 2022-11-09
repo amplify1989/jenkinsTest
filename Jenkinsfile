@@ -6,7 +6,7 @@ pipeline {
 
     stages {
 
-        stage('Build') {
+        stage("build") {
 
             steps {
                 sh 'Build stage'
@@ -14,10 +14,18 @@ pipeline {
 
         }
 
-        stage('Test') {
+        stage("test") {
 
             steps {
                 sh 'Test stage'
+            }
+
+        }
+
+        stage("deploy") {
+
+            steps {
+                sh 'Deploy stage'
             }
 
         }
