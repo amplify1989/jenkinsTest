@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubertestapp
+  labels:
+    name: kubertestapp
+spec:
+  selector:
+    matchLabels:
+      name: kubertestapp
+  template:
+    metadata:
+      labels:
+        name: kubertestapp
+    spec:
+      containers:
+        - name: kubertestapp
+          image: kubertestapp
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
